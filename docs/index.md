@@ -41,3 +41,57 @@ Figure 1 shows us the first instance of pseudocode drafted up under the Processi
 
 I also drafted up comments for the function to summarize its purpose, its parameters, as well as what the function returns to make it clear for others reading the code to understand the function at a moment’s glance. 
 
+```Python
+def read_data_from_file(file_name):
+    """ Reads data from a File to a List
+
+            :param file_name: (string) with name of file:
+            :return : (list) of file data
+    """
+    pass #TODO: Add code here
+    #open File
+    #objFile = open(file_name, "rb")
+    
+    #load data
+    #objFileData = pickle.load(objFile)
+        #note will only load one row of data!
+    
+    #close file
+    #objFile.close()
+```
+
+###### Figure 2: Pseudocode for the second function in the script: *read_data_from_file*
+
+Figure 2 shows us the pseudocode draft for the second function of the script in the Processing section of the code: *read_data_from_file*. Again, like with the function in Figure 1, there was not much guidance provided with the starter code. However, I felt like the purpose of the function was clear from its name. I drafted up some pseudocode to get started on tackling the task for this function. Given that we’re reading data from a file, I determined that first I needed to open the file. After opening the file I simply defined a new list *objFileData* to load the data that was pickled into. I did however note that this would simply load the first line that was pickled, not the entirety of data if there were multiple lines. I decided to tackle that later. Finally, I finished by closing the file and returning the list the previously pickled data was loaded onto. 
+
+Like with the first function, I wrote up a summary in the beginning of the function to summarize its purpose, the parameters it takes, as well as what it returns. 
+
+### 2.2 Presentation
+The next section of the script is the Presentation. Here I was provided with three tasks by the starter code: 
+1.	Get an ID and name from the user, then store it in a list object
+2.	Store a list object into a binary file
+3.	Read the data saved in the binary file into a new list object and display the contents of the new list object. 
+
+```Python
+#TODO: Get ID and NAME from user, then store it in a list object
+#get input ID
+#inputID = int(input("Enter an Id: "))
+
+#get input Name
+#inputName = str(input("Enter a Name: "))
+
+#save in list
+#lstCustomer = [inputID, inputName]
+```
+###### Figure 3: Pseudocode written for the first TO DO of the Presentation Section
+
+Figure 3 shows the pseudocode for the first task listed above. To get an ID and name from a user, I first defined two variables inputID and inputName and initialized them using the input() function. After assigning values to these two variables from the user’s input, these variables are then saved into a list lstCustomer, declared under the Data section of the script.
+
+```Python
+#TODO: store the list object into a binary file
+#call save data to file
+#save_data_to_file(strFileName, lstCustomer)
+```
+###### Figure 3: Pseudocode written for the second TO DO of the Presentation Section
+
+The second task under the Presentation section of the script was to store the list, lstCustomer, into a binary file. To do so, I simply drafted pseudocode (along with actual Python) to call the previously defined function save_list_to_file().The pseudocode drafted can be seen in Figure 4 where you can see the commented out Python code underneath the pseudocode.
