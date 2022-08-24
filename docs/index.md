@@ -2,7 +2,7 @@ Johanna Mannisto
 ITN FDN 110 B
 August 22, 2022
 Assignment 7
-[Assignment 07 Code]()
+[Assignment 07 Code](https://github.com/jmannisto/IntroToProg-Python-Mod07/blob/main/Assignment07_JMannisto.py)
 
 # Pickling and Error Handling in Python
 ## 1 Introduction
