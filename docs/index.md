@@ -309,7 +309,9 @@ Everything also ran as expected in the Mac Terminal. The images below show the s
 Figure 18 demonstrates the same information as seen in Figure 15. Here, we see the program running as expected when the inputs are as expected (i.e., a number is inputted in for the ID).
 
 <img width="278" alt="image" src="https://user-images.githubusercontent.com/67613785/186397704-c8f1a3c5-3f13-4820-9bd1-3880322252da.png">
-###### Figure 19: 
+###### Figure 19: Output when error exception handling occurs in script in Mac Terminal
+
+Figure 19, like Figure 17, shows what the output is for the user when the error ValueError is thrown when a user inputs an ID. With the error handling set up in the script, as we see in Figure 19, it lets the user know that they should enter a number for the ID and prompts them to re-enter as expected.
 
 ## 5 Summary
 
