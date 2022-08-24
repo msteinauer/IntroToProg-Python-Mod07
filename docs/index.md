@@ -265,14 +265,15 @@ save_data_to_file(strFileName, lstCustomer)
 Figure 12 shows the code for this task. Here we simply call the function and use the appropriate variables *strFileName* and *lstCustomer* to indicate which list we want saved into which file.
 
 #### 3.3.3 Reading and Displaying Contents of a Binary File
-The final task of the TODOs given by the start script was to read the data from the file into a new list object and to display its contents. 
+
+The final task of the TODOs given by the start script was to read the data from the file into a new list object and to display its contents. Figure 13 shows the initial draft of this code. Here we initialized the variable allCustomers by calling the function read_data_from_file(), passing the variable strFileName as an argument. This will populate the variable allCustomers with all of the IDs and names of the customers saved in the file. Next, in order to display the contents to the user, I printed the list. However simply printing the list does not make any adjustments to the output and will not provide the best output for the user. 
 
 ```Python
 # TODO: Read the data from the file into a new list object and display the contents
 allCustomers = read_data_from_file(strFileName)
 print(allCustomers) #TODO: Customize the output
 ```
-###### Figure 13: 
+###### Figure 13: Intial draft of code for the final TODO in the script
 
 ```Python
 # TODO: Read the data from the file into a new list object and display the contents
@@ -282,7 +283,9 @@ print("The current data is: ")
 for i in range(0,len(allCustomers),2):
     print(allCustomers[i], allCustomers[i + 1])
 ```
-###### Figure 14:
+###### Figure 14: Updated code for final TODO
+
+In Figure 14 we see an updated piece of code for this task. Here I’ve added a for loop to loop through the list allCustomers and step by 2 so that we can print each ID and name together and not see duplicates of any items as we step through the list. This way each line will have the corresponding names and IDs of customers, resulting in an improved output for the user to view. 
 
 ## 4 Testing the Code
 Now that my script was complete, I tested it out in two locations: PyCharm and my Mac Terminal. 
