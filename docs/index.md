@@ -1,4 +1,9 @@
+Johanna Mannisto
+ITN FDN 110 B
+August 22, 2022
+Assignment 7
 [Assignment 07 Code]()
+
 # Pickling and Error Handling in Python
 ## 1 Introduction
 
