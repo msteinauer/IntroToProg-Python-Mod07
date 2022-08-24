@@ -147,6 +147,96 @@ Figure 6 shows the code for the function *save_data_to_file(file_name, list_of_d
 
 
 #### 3.2.2 Reading Data From a File 
+The next function in the Processing section of the script is the function: *read_data_from_file(file_name)*. This function takes one parameter: the file name we want to read from.
+
+Given that we’re reading data from a file, we first open the file. After opening the file, a new list *objFileData* is defined to load the data that was pickled into. Like with the first function, I did some additional editing after drafting the pseudocode. I had noted that the pseudocode’s structure of simply defining one list object with only one use of the *load()* function would only load the first line that was pickled, not the entirety of data if there were multiple lines. 
+
+I decided to address this with a while loop. Within this loop was a try-except structure for some structured error handling. The while loop loops through the file and loads line by line the data from the file to the list objFileData. At some point though the file will run out of data and Python will throw an EOFError, or End-of-File Error. Instead of allowing Python to stop my program with the error, I decided to use this as my trigger to break out of the while loop. So, under the except statement, I put the keyword break to break out of the while loop instead of halting the program when we run into the end of the file. 
+
+I finished by closing the file and returning the list the previously pickled data was loaded onto. 
+
+```Python
+def read_data_from_file(file_name):
+    """ Reads data from File to a List
+
+            :param file_name: (string) with name of file
+            :return objFileData: (list) of file data
+    """
+    objFile = open(file_name, "rb+")
+    objFileData = []
+    while True:
+        try:
+            objFileData.append(pickle.load(objFile))
+        except EOFError
+            break
+    objFile.close()
+    return objFileData 
+```
+###### Figure 7: Code for function *read_data_from_file(file_name)*
+
+Figure 7 shows the code for the function *read_data_from_file(file_name)*.  
+
+To make it more user friendly, I then added some print lines to ensure that the user felt that they knew what was going on. These edits can be seen in Figure 8. 
+
+```Python
+def read_data_from_file(file_name):
+    """ Reads data from File to a List
+
+            :param file_name: (string) with name of file
+            :return objFileData: (list) of file data
+    """
+    print(f"Reading data from {file_name}...")
+    objFile = open(file_name, "rb+")
+    objFileData = []
+    while True:
+        try:
+            objFileData.append(pickle.load(objFile))
+        except EOFError:
+            print("No more data in file. Closing file...")
+            break
+    objFile.close()
+    return objFileData 
+```
+###### Figure 8: Updated code for function *read_data_from_file(file_name)*
+
+### 3.3 Presentation
+The next section of the script is the *Processing* secctionn. It is here where we see the code for the interaction between the user and the program. Pre-written in the starter script was three tasks:
+1 Get an ID and name from the user, then store it in a list object
+2 Store a list object into a binary file
+3 Read the data saved in teh binary file into a new list object and display the contents of the new list object
+
+#### 3.1.1 Getting Input from the User
+The first task under the presentation section was to get an ID and name from the user to store in a list object. First, I drafted up collecting the information from the user and then storing that information in a list. 
+
+Figure 9 shows the code for this draft.  
+```Python
+#TODO: Get ID and NAME from user, then store it in a list object
+inputID = input("Enter an Id: ")
+inputName = input("Enter a Name: ")
+lstCustomer = [inputID, inputName]
+```
+###### Figure 9: Code for the task to get an id and name from the user
+
+However, I then decided to create another function to perform this task. At this point we are only performing this task once, but I could imagine wanting to have more flexibility in this code and wanting to get ID and name information from a user multiple times, in which having a function could make this easier. 
+
+The new function *get_id_and_name()* was placed under the Processing section of the code with the other functions. This function’s purpose is to receive input from the user on the id and name they’d like to add. You can see the code for this function in Figure 10. 
+
+```Python
+def get_id_and_name():
+    """ Gets ID and Name input from a user
+        :param: none
+        :return input ID: (int) ID inputted by user, inputName: (str) Name inputted by user
+    """
+    try:
+        inputID = int(input("Enter an Id: "))
+    except ValueError:  
+        print("Please enter a number as an Id")
+        inputID = int(input("Enter an Id: "))
+    inputName = input("Enter a Name: ")
+    return inputID, inputName
+```
+This function is very straightforward.  First we include a try and except statement. As we want the ID to be a number (or series of numbers), if the user enters any letters or other characters instead of halting the program, the try-except statement will prompt the user to enter the ID again, this time with numbers. A variable *inputID* is used to hold the user’s input for and ID. Next the variable *inputName* is initialized with the user’s input for a name. We then return both variables. 
+
 
 
 
