@@ -251,4 +251,58 @@ To then tackle the task under the Presentation portion of the script, we then in
 #### 3.3.2 Storing the List to a Binary File
 The next task in the *Presentation* portion of the script is to store the list to a binary file. Given that we’ve already set up a function to do that, *save_data_to_file(strFileName, lstCustomer)* we can use the function to accomplish this task. 
 
+```Python
+# TODO: store the list object into a binary file
+save_data_to_file(strFileName, lstCustomer)
+```
+###### Figure 12: Code for the task to store a list object into a binary file
+Figure 12 shows the code for this task. Here we simply call the function and use the appropriate variables *strFileName* and *lstCustomer* to indicate which list we want saved into which file.
+
+#### 3.3.3 Reading and Displaying Contents of a Binary File
+The final task of the TODOs given by the start script was to read the data from the file into a new list object and to display its contents. 
+
+```Python
+# TODO: Read the data from the file into a new list object and display the contents
+allCustomers = read_data_from_file(strFileName)
+print(allCustomers) #TODO: Customize the output
+```
+###### Figure 13: 
+
+```Python
+# TODO: Read the data from the file into a new list object and display the contents
+allCustomers = read_data_from_file(strFileName)
+print("The current data is: ")
+
+for i in range(0,len(allCustomers),2):
+    print(allCustomers[i], allCustomers[i + 1])
+```
+###### Figure 14:
+
+## 4 Testing the Code
+Now that my script was complete, I tested it out in two locations: PyCharm and my Mac Terminal. 
+
+### 4.1 PyCharm
+To test the program on PyCharm, I simply clicked on Run in the upper command line to run the program I was editing. 
+<img width="325" alt="image" src="https://user-images.githubusercontent.com/67613785/186396607-d97c127f-0020-42fc-9844-c85bf1e4c83f.png">
+###### Figure 15:
+
+<img width="322" alt="image" src="https://user-images.githubusercontent.com/67613785/186397447-ac27e1c6-162d-4ded-b7cf-92f7d740c83b.png">
+###### Figure 16:
+
+<img width="343" alt="image" src="https://user-images.githubusercontent.com/67613785/186397494-a1e0ed3b-6b2d-4527-a6ea-114379ae8783.png">
+###### Figure 17:
+
+Overall, the program ran as expected in PyCharm. We see the prompts we expect, the error exception handling is performing as desired, and the data is saved and read back for the user as intended. 
+
+### 4.2 Mac Terminal 
+Everything also ran as expected in the Mac Terminal. The images below show the same outputs as seen in [4.1 PyCharm](INSERT LINK).
+
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/67613785/186397661-c20f5472-8af2-4ea6-9f6a-2140ba11ad43.png">
+###### Figure 18:
+
+<img width="278" alt="image" src="https://user-images.githubusercontent.com/67613785/186397704-c8f1a3c5-3f13-4820-9bd1-3880322252da.png">
+###### Figure 19: 
+
+## 5 Summary
+
 
