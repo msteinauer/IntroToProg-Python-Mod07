@@ -235,8 +235,20 @@ def get_id_and_name():
     inputName = input("Enter a Name: ")
     return inputID, inputName
 ```
-This function is very straightforward.  First we include a try and except statement. As we want the ID to be a number (or series of numbers), if the user enters any letters or other characters instead of halting the program, the try-except statement will prompt the user to enter the ID again, this time with numbers. A variable *inputID* is used to hold the user’s input for and ID. Next the variable *inputName* is initialized with the user’s input for a name. We then return both variables. 
+###### Figure 10: Code for the function *get_id_and_name()* 
 
+This function is very straightforward.  First, we include a try and except statement. As we want the ID to be a number (or series of numbers), if the user enters any letters or other characters instead of halting the program, the try-except statement will prompt the user to enter the ID again, this time with numbers. A variable *inputID* is used to hold the user’s input for and ID. Next the variable *inputName* is initialized with the user’s input for a name. We then return both variables. 
 
+```Python
+# TODO: Get ID and NAME From user, then store it in a list object
+id, name = get_id_and_name()
+lstCustomer = [id, name]
+```
+###### Figure 11: Code for the task to get id and name from a user
+
+To then tackle the task under the Presentation portion of the script, we then initialize variables id and name by calling the function *get_id_and_name()*. We then assign these values to the list *lstCustomer*. This process can be seen in Figure 11.
+
+#### 3.3.2 Storing the List to a Binary File
+The next task in the *Presentation* portion of the script is to store the list to a binary file. Given that we’ve already set up a function to do that, *save_data_to_file(strFileName, lstCustomer)* we can use the function to accomplish this task. 
 
 
