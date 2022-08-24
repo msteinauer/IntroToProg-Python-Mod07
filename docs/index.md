@@ -284,13 +284,19 @@ Now that my script was complete, I tested it out in two locations: PyCharm and m
 ### 4.1 PyCharm
 To test the program on PyCharm, I simply clicked on Run in the upper command line to run the program I was editing. 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/67613785/186396607-d97c127f-0020-42fc-9844-c85bf1e4c83f.png">
-##### Figure 15:
+###### Figure 15: Output from running the script
+
+Figure 15 shows the program running as expected when the inputs are as expected (i.e. a number is inputted in for the ID). 
 
 <img width="322" alt="image" src="https://user-images.githubusercontent.com/67613785/186397447-ac27e1c6-162d-4ded-b7cf-92f7d740c83b.png">
-##### Figure 16:
+###### Figure 16: Output from re-running the script
+
+We see in Figure 16 that the data is saved in the file and the new data is appended to the end of the file. When we then read the data from the file, all of the data is printed for the user.
 
 <img width="343" alt="image" src="https://user-images.githubusercontent.com/67613785/186397494-a1e0ed3b-6b2d-4527-a6ea-114379ae8783.png">
-##### Figure 17:
+###### Figure 17: Output when error exception handling occurs in the script
+
+Figure 17 shows what the output is for the user when the error ValueError is thrown when a user inputs an ID. With the error handling set up in the script, as we see in Figure 17, it lets the user know that they should enter an number for the ID and prompts them to re-enter as expected. 
 
 Overall, the program ran as expected in PyCharm. We see the prompts we expect, the error exception handling is performing as desired, and the data is saved and read back for the user as intended. 
 
@@ -298,10 +304,10 @@ Overall, the program ran as expected in PyCharm. We see the prompts we expect, t
 Everything also ran as expected in the Mac Terminal. The images below show the same outputs as seen in [4.1 PyCharm](INSERT LINK).
 
 <img width="317" alt="image" src="https://user-images.githubusercontent.com/67613785/186397661-c20f5472-8af2-4ea6-9f6a-2140ba11ad43.png">
-##### Figure 18:
+###### Figure 18:
 
 <img width="278" alt="image" src="https://user-images.githubusercontent.com/67613785/186397704-c8f1a3c5-3f13-4820-9bd1-3880322252da.png">
-##### Figure 19: 
+###### Figure 19: 
 
 ## 5 Summary
 
