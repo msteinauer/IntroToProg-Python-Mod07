@@ -314,5 +314,8 @@ Figure 18 demonstrates the same information as seen in Figure 15. Here, we see t
 Figure 19, like Figure 17, shows what the output is for the user when the error ValueError is thrown when a user inputs an ID. With the error handling set up in the script, as we see in Figure 19, it lets the user know that they should enter a number for the ID and prompts them to re-enter as expected.
 
 ## 5 Summary
+In summary, Assignment 7 was a freeform assignment centered around the topics of Structured Error Handling and Pickling. Like with the previous assignments, I started off by writing pseudocode of what I thought I wanted the program to do, followed by writing out full code statements. Iterating through the assignment by reading through the script, writing out the pseudocode, and then going back to convert the pseudocode into actual Python allowed me time to process and think over ways to go through this assignment. I made the most changes to the code this time around after I wrote out the pseudocode. 
+
+Overall, the pickling process was very simple, as I feel comfortable calling functions and using them. The structured error handling was interesting to use, and I believe allows me to leverage certain errors to my advantage (for instance using the EOFError to break out of a while loop instead of needing to figure out how many lines are in the file in the first place to cycle through). There are many ways to use error handling to improve the experience for the user but to also use as elements in your script to move the program forward! 
 
 
