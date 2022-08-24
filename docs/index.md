@@ -301,10 +301,12 @@ Figure 17 shows what the output is for the user when the error ValueError is thr
 Overall, the program ran as expected in PyCharm. We see the prompts we expect, the error exception handling is performing as desired, and the data is saved and read back for the user as intended. 
 
 ### 4.2 Mac Terminal 
-Everything also ran as expected in the Mac Terminal. The images below show the same outputs as seen in [4.1 PyCharm](INSERT LINK).
+Everything also ran as expected in the Mac Terminal. The images below show the same outputs as seen in [4.1 PyCharm](https://jmannisto.github.io/IntroToProg-Python-Mod07/#41-pycharm). 
 
 <img width="317" alt="image" src="https://user-images.githubusercontent.com/67613785/186397661-c20f5472-8af2-4ea6-9f6a-2140ba11ad43.png">
-###### Figure 18:
+###### Figure 18: Output from runnning the script in Mac Terminal 
+
+Figure 18 demonstrates the same information as seen in Figure 15. Here, we see the program running as expected when the inputs are as expected (i.e., a number is inputted in for the ID).
 
 <img width="278" alt="image" src="https://user-images.githubusercontent.com/67613785/186397704-c8f1a3c5-3f13-4820-9bd1-3880322252da.png">
 ###### Figure 19: 
