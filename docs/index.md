@@ -83,15 +83,70 @@ The next section of the script is the Presentation. Here I was provided with thr
 #save in list
 #lstCustomer = [inputID, inputName]
 ```
-###### Figure 3: Pseudocode written for the first TO DO of the Presentation Section
+###### Figure 3: Pseudocode written for the first TODO of the Presentation Section
 
-Figure 3 shows the pseudocode for the first task listed above. To get an ID and name from a user, I first defined two variables inputID and inputName and initialized them using the input() function. After assigning values to these two variables from the user’s input, these variables are then saved into a list lstCustomer, declared under the Data section of the script.
+Figure 3 shows the pseudocode for the first task listed above. To get an ID and name from a user, I first defined two variables *inputID* and *inputName* and initialized them using the *input()* function. After assigning values to these two variables from the user’s input, these variables are then saved into a list *lstCustomer*, declared under the Data section of the script.
 
 ```Python
 #TODO: store the list object into a binary file
 #call save data to file
 #save_data_to_file(strFileName, lstCustomer)
 ```
-###### Figure 3: Pseudocode written for the second TO DO of the Presentation Section
+###### Figure 4: Pseudocode written for the second TODO of the Presentation Section
 
-The second task under the Presentation section of the script was to store the list, lstCustomer, into a binary file. To do so, I simply drafted pseudocode (along with actual Python) to call the previously defined function save_list_to_file().The pseudocode drafted can be seen in Figure 4 where you can see the commented out Python code underneath the pseudocode.
+The second task under the Presentation section of the script was to store the list, lstCustomer, into a binary file. To do so, I simply drafted pseudocode (along with actual Python) to call the previously defined function *save_list_to_file()*.The pseudocode drafted can be seen in Figure 4 where you can see the commented out Python code underneath the pseudocode.
+
+```Python
+#TODO: Read the data from the file into a new list object and display the contents
+
+#call read file function
+#allCustomers = read_data_from_file(strFileName)
+
+#read the list
+#print(allCustomers)
+```
+###### Figure 5: Pseudocode written for the final TODO of the Presentation Section
+
+The final drafted pseudocode was for the last task under the Presentation section of the script. This can be seen in Figure 5. The task here was to read the data from a file into a new list object and to then print out the contents of the list. To me it seemed clear that this was a place to call the *read_data_from_file* function previously. However, that function returns a list, so I needed to have a place to put the data from the function. This led me to initialize a new variable *allCustomers* with the data from calling the function *read_data_from_file*. After assigning data to that variable, I then needed to read the list, most likely with some sort of print function. 
+
+## 3 Writing the Code
+After drafting up the pseudocode, as described in [2 Writing the Pseudocode](https://jmannisto.github.io/IntroToProg-Python-Mod07/#2-writing-the-pseudocode) I started writing full statements out in Python. 
+
+### 3.1 Data
+The first section of our code is Data. Here, variables and constants are initialized, if relevant to the section. Variables had already been declared in the data section and I did not see any need to add any more variables to the code than what had already been included. 
+
+### 3.2 Processing
+Under the Processing section of the script is where the functions are defined for this script.  
+
+In our Processing section we have two functions: 
+- *save_data_to_file(file_name, list_of_data)*
+- *Read_data_from_file(file_name)* 
+
+Both functions required editing for the assignment. 
+
+#### 3.2.1 Saving Data to a File
+The first function in the starter code was the function *save_data_to_file(file_name, list_of_data)*. This function takes two parameters: the file name we want to save data to and the list that holds the data we want to save. 
+
+The code for this function can be seen in Figure 6. Here, I opened the file in append mode in binary format, so that any data added would add the data to the end of the file rather than writing over the file. After opening the file, I made some additional edits to the pseudocode. Originally there was simply a *dump()* function imported from the pickle class to dump all the data from the list identified as an argument in the function. However, I added a for loop to loop through the *list_of_data*. For each row, we perform the *dump()* function so that we are able to add multiple lines of data to the file of binary data if needed. I added this so that there is flexibility for the program to be able to store multiple lines of data in the initial list populated by the user. After dumping the data in binary format, we close the file.
+
+```Python
+def save_data_to_file(file_name, list_of_data):
+    """ Saves data from a List to a File
+
+            :param file_name: (string) with name of file:
+            :param list_of_data: (list) you want filled with file data:
+            :return: nothing
+    """
+    objFile = open(file_name, "ab")
+    for row in list_of_data:
+        pickle.dump(row, objFile)
+    objFile.close()
+```
+###### Figure 6: Code for function *save_data_to_file(file_name, list_of_data)*
+Figure 6 shows the code for the function *save_data_to_file(file_name, list_of_data)*. 
+
+
+#### 3.2.2 Reading Data From a File 
+
+
+
